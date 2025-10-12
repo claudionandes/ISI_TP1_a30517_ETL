@@ -1,0 +1,20 @@
+# Ficheiros temporários do Windows
+Thumbs.db
+*.tmp
+*.bak
+
+# Ficheiros internos do KNIME
+.knimeLock
+*.metadata
+.artifacts
+.workflowset.meta
+.savedWithData
+*/Constant Value Column (#)*
+*/Column Filter (#)*
+*/JSON Writer (#)*
+*/XPath (#)*
+*/Try_Data Ports (#)*
+
+# Dados grandes (opcional)
+*/exports/*
+*/temp/*

@@ -1,0 +1,151 @@
+[ {
+  "DataHora" : "14-05-2006 13:00:00",
+  "ResultadoInfo" : "Vitória de OB",
+  "EquipaCasa" : "AGF",
+  "EquipaFora" : "OB",
+  "Jogo" : "AGF vs OB"
+}, {
+  "DataHora" : "30-04-2006 13:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "Midtjylland",
+  "EquipaFora" : "Esbjerg",
+  "Jogo" : "Midtjylland vs Esbjerg"
+}, {
+  "DataHora" : "29-04-2006 15:00:00",
+  "ResultadoInfo" : "Vitória de SønderjyskE",
+  "EquipaCasa" : "SønderjyskE",
+  "EquipaFora" : "AGF",
+  "Jogo" : "SønderjyskE vs AGF"
+}, {
+  "DataHora" : "26-04-2006 16:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "Nordsjælland",
+  "EquipaFora" : "København",
+  "Jogo" : "Nordsjælland vs København"
+}, {
+  "DataHora" : "08-04-2006 15:00:00",
+  "ResultadoInfo" : "Vitória de Brøndby",
+  "EquipaCasa" : "Brøndby",
+  "EquipaFora" : "AaB",
+  "Jogo" : "Brøndby vs AaB"
+}, {
+  "DataHora" : "02-04-2006 13:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "Midtjylland",
+  "EquipaFora" : "Horsens",
+  "Jogo" : "Midtjylland vs Horsens"
+}, {
+  "DataHora" : "02-04-2006 13:00:00",
+  "ResultadoInfo" : "Vitória de Esbjerg",
+  "EquipaCasa" : "Esbjerg",
+  "EquipaFora" : "Silkeborg",
+  "Jogo" : "Esbjerg vs Silkeborg"
+}, {
+  "DataHora" : "29-03-2006 17:00:00",
+  "ResultadoInfo" : "Vitória de Silkeborg",
+  "EquipaCasa" : "Silkeborg",
+  "EquipaFora" : "AGF",
+  "Jogo" : "Silkeborg vs AGF"
+}, {
+  "DataHora" : "26-03-2006 13:00:00",
+  "ResultadoInfo" : "Vitória de Brøndby",
+  "EquipaCasa" : "Brøndby",
+  "EquipaFora" : "Silkeborg",
+  "Jogo" : "Brøndby vs Silkeborg"
+}, {
+  "DataHora" : "25-03-2006 16:00:00",
+  "ResultadoInfo" : "Vitória de Esbjerg",
+  "EquipaCasa" : "Esbjerg",
+  "EquipaFora" : "OB",
+  "Jogo" : "Esbjerg vs OB"
+}, {
+  "DataHora" : "19-03-2006 14:00:00",
+  "ResultadoInfo" : "Vitória de Horsens",
+  "EquipaCasa" : "Horsens",
+  "EquipaFora" : "Viborg",
+  "Jogo" : "Horsens vs Viborg"
+}, {
+  "DataHora" : "12-03-2006 14:00:00",
+  "ResultadoInfo" : "Vitória de OB",
+  "EquipaCasa" : "OB",
+  "EquipaFora" : "Nordsjælland",
+  "Jogo" : "OB vs Nordsjælland"
+}, {
+  "DataHora" : "27-11-2005 16:30:00",
+  "ResultadoInfo" : "Vitória de FC Copenhagen",
+  "EquipaCasa" : "AaB",
+  "EquipaFora" : "København",
+  "Jogo" : "AaB vs København"
+}, {
+  "DataHora" : "27-11-2005 14:00:00",
+  "ResultadoInfo" : "Vitória de Viborg",
+  "EquipaCasa" : "Viborg",
+  "EquipaFora" : "Nordsjælland",
+  "Jogo" : "Viborg vs Nordsjælland"
+}, {
+  "DataHora" : "20-11-2005 16:30:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "København",
+  "EquipaFora" : "AGF",
+  "Jogo" : "København vs AGF"
+}, {
+  "DataHora" : "30-10-2005 14:00:00",
+  "ResultadoInfo" : "Vitória de SønderjyskE",
+  "EquipaCasa" : "Silkeborg",
+  "EquipaFora" : "SønderjyskE",
+  "Jogo" : "Silkeborg vs SønderjyskE"
+}, {
+  "DataHora" : "30-10-2005 14:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "Horsens",
+  "EquipaFora" : "OB",
+  "Jogo" : "Horsens vs OB"
+}, {
+  "DataHora" : "26-10-2005 18:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "Esbjerg",
+  "EquipaFora" : "Brøndby",
+  "Jogo" : "Esbjerg vs Brøndby"
+}, {
+  "DataHora" : "26-10-2005 17:00:00",
+  "ResultadoInfo" : "Vitória de AaB",
+  "EquipaCasa" : "OB",
+  "EquipaFora" : "AaB",
+  "Jogo" : "OB vs AaB"
+}, {
+  "DataHora" : "26-10-2005 17:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "AGF",
+  "EquipaFora" : "Viborg",
+  "Jogo" : "AGF vs Viborg"
+}, {
+  "DataHora" : "23-10-2005 15:30:00",
+  "ResultadoInfo" : "Vitória de Brøndby",
+  "EquipaCasa" : "Brøndby",
+  "EquipaFora" : "Midtjylland",
+  "Jogo" : "Brøndby vs Midtjylland"
+}, {
+  "DataHora" : "23-10-2005 13:00:00",
+  "ResultadoInfo" : "Vitória de Nordsjælland",
+  "EquipaCasa" : "Nordsjælland",
+  "EquipaFora" : "SønderjyskE",
+  "Jogo" : "Nordsjælland vs SønderjyskE"
+}, {
+  "DataHora" : "22-10-2005 15:00:00",
+  "ResultadoInfo" : "Vitória de FC Copenhagen",
+  "EquipaCasa" : "København",
+  "EquipaFora" : "Horsens",
+  "Jogo" : "København vs Horsens"
+}, {
+  "DataHora" : "02-10-2005 13:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "AaB",
+  "EquipaFora" : "Midtjylland",
+  "Jogo" : "AaB vs Midtjylland"
+}, {
+  "DataHora" : "02-10-2005 13:00:00",
+  "ResultadoInfo" : "Empate",
+  "EquipaCasa" : "Viborg",
+  "EquipaFora" : "SønderjyskE",
+  "Jogo" : "Viborg vs SønderjyskE"
+} ]
