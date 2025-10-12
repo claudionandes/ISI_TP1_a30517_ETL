@@ -1,5 +1,3 @@
----
-
 ## 🛠️ Ferramentas Utilizadas
 
 | Fase | Ferramenta | Descrição |
@@ -100,5 +98,4 @@ no âmbito da UC **Integração de Sistemas de Informação**
 ---
 
 # ISI_TP1_a30517_ETL
-ETL completo (KNIME + Node-RED + Dashboards)
-
+ETL completo (KNIME + Node-RED)
