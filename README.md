@@ -26,7 +26,7 @@ O processo no KNIME implementa as seguintes etapas:
 
 ## 💻 Visualização no Node-RED
 
-### 🧱 Estrutura do fluxo: `futebol_dashboard.json`
+### 🧱 Estrutura do fluxo: `Dashboard.json`
 
 O dashboard criado no Node-RED tem como objetivo apresentar indicadores e permitir filtragem dinâmica.
 
