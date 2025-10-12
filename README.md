@@ -57,7 +57,6 @@ O dashboard criado no Node-RED tem como objetivo apresentar indicadores e permit
 - Filtro de pesquisa por equipa (campo de texto)
 - Botões uniformes “Pesquisar” e “Limpar”
 - Tabela responsiva com colunas:
-  - 📅 Data e Hora  
   - 🏠 Equipa Casa  
   - 🚩 Equipa Fora  
   - 🏆 Resultado  
