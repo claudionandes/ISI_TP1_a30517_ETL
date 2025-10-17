@@ -1,0 +1,179 @@
+<!-- Erro DTD: The content of element type "item" must match "(DataHora,ResultadoInfo,EquipaCasa,EquipaFora,Equipas,Jogo)". -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <item>
+        <DataHora>14-05-2006 13:00:00</DataHora>
+        <ResultadoInfo>Vitória de OB</ResultadoInfo>
+        <EquipaCasa>AGF</EquipaCasa>
+        <EquipaFora>OB</EquipaFora>
+        <Jogo>AGF vs OB</Jogo>
+    </item>
+    <item>
+        <DataHora>30-04-2006 13:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>Midtjylland</EquipaCasa>
+        <EquipaFora>Esbjerg</EquipaFora>
+        <Jogo>Midtjylland vs Esbjerg</Jogo>
+    </item>
+    <item>
+        <DataHora>29-04-2006 15:00:00</DataHora>
+        <ResultadoInfo>Vitória de SønderjyskE</ResultadoInfo>
+        <EquipaCasa>SønderjyskE</EquipaCasa>
+        <EquipaFora>AGF</EquipaFora>
+        <Jogo>SønderjyskE vs AGF</Jogo>
+    </item>
+    <item>
+        <DataHora>26-04-2006 16:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>Nordsjælland</EquipaCasa>
+        <EquipaFora>København</EquipaFora>
+        <Jogo>Nordsjælland vs København</Jogo>
+    </item>
+    <item>
+        <DataHora>08-04-2006 15:00:00</DataHora>
+        <ResultadoInfo>Vitória de Brøndby</ResultadoInfo>
+        <EquipaCasa>Brøndby</EquipaCasa>
+        <EquipaFora>AaB</EquipaFora>
+        <Jogo>Brøndby vs AaB</Jogo>
+    </item>
+    <item>
+        <DataHora>02-04-2006 13:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>Midtjylland</EquipaCasa>
+        <EquipaFora>Horsens</EquipaFora>
+        <Jogo>Midtjylland vs Horsens</Jogo>
+    </item>
+    <item>
+        <DataHora>02-04-2006 13:00:00</DataHora>
+        <ResultadoInfo>Vitória de Esbjerg</ResultadoInfo>
+        <EquipaCasa>Esbjerg</EquipaCasa>
+        <EquipaFora>Silkeborg</EquipaFora>
+        <Jogo>Esbjerg vs Silkeborg</Jogo>
+    </item>
+    <item>
+        <DataHora>29-03-2006 17:00:00</DataHora>
+        <ResultadoInfo>Vitória de Silkeborg</ResultadoInfo>
+        <EquipaCasa>Silkeborg</EquipaCasa>
+        <EquipaFora>AGF</EquipaFora>
+        <Jogo>Silkeborg vs AGF</Jogo>
+    </item>
+    <item>
+        <DataHora>26-03-2006 13:00:00</DataHora>
+        <ResultadoInfo>Vitória de Brøndby</ResultadoInfo>
+        <EquipaCasa>Brøndby</EquipaCasa>
+        <EquipaFora>Silkeborg</EquipaFora>
+        <Jogo>Brøndby vs Silkeborg</Jogo>
+    </item>
+    <item>
+        <DataHora>25-03-2006 16:00:00</DataHora>
+        <ResultadoInfo>Vitória de Esbjerg</ResultadoInfo>
+        <EquipaCasa>Esbjerg</EquipaCasa>
+        <EquipaFora>OB</EquipaFora>
+        <Jogo>Esbjerg vs OB</Jogo>
+    </item>
+    <item>
+        <DataHora>19-03-2006 14:00:00</DataHora>
+        <ResultadoInfo>Vitória de Horsens</ResultadoInfo>
+        <EquipaCasa>Horsens</EquipaCasa>
+        <EquipaFora>Viborg</EquipaFora>
+        <Jogo>Horsens vs Viborg</Jogo>
+    </item>
+    <item>
+        <DataHora>12-03-2006 14:00:00</DataHora>
+        <ResultadoInfo>Vitória de OB</ResultadoInfo>
+        <EquipaCasa>OB</EquipaCasa>
+        <EquipaFora>Nordsjælland</EquipaFora>
+        <Jogo>OB vs Nordsjælland</Jogo>
+    </item>
+    <item>
+        <DataHora>27-11-2005 16:30:00</DataHora>
+        <ResultadoInfo>Vitória de FC Copenhagen</ResultadoInfo>
+        <EquipaCasa>AaB</EquipaCasa>
+        <EquipaFora>København</EquipaFora>
+        <Jogo>AaB vs København</Jogo>
+    </item>
+    <item>
+        <DataHora>27-11-2005 14:00:00</DataHora>
+        <ResultadoInfo>Vitória de Viborg</ResultadoInfo>
+        <EquipaCasa>Viborg</EquipaCasa>
+        <EquipaFora>Nordsjælland</EquipaFora>
+        <Jogo>Viborg vs Nordsjælland</Jogo>
+    </item>
+    <item>
+        <DataHora>20-11-2005 16:30:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>København</EquipaCasa>
+        <EquipaFora>AGF</EquipaFora>
+        <Jogo>København vs AGF</Jogo>
+    </item>
+    <item>
+        <DataHora>30-10-2005 14:00:00</DataHora>
+        <ResultadoInfo>Vitória de SønderjyskE</ResultadoInfo>
+        <EquipaCasa>Silkeborg</EquipaCasa>
+        <EquipaFora>SønderjyskE</EquipaFora>
+        <Jogo>Silkeborg vs SønderjyskE</Jogo>
+    </item>
+    <item>
+        <DataHora>30-10-2005 14:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>Horsens</EquipaCasa>
+        <EquipaFora>OB</EquipaFora>
+        <Jogo>Horsens vs OB</Jogo>
+    </item>
+    <item>
+        <DataHora>26-10-2005 18:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>Esbjerg</EquipaCasa>
+        <EquipaFora>Brøndby</EquipaFora>
+        <Jogo>Esbjerg vs Brøndby</Jogo>
+    </item>
+    <item>
+        <DataHora>26-10-2005 17:00:00</DataHora>
+        <ResultadoInfo>Vitória de AaB</ResultadoInfo>
+        <EquipaCasa>OB</EquipaCasa>
+        <EquipaFora>AaB</EquipaFora>
+        <Jogo>OB vs AaB</Jogo>
+    </item>
+    <item>
+        <DataHora>26-10-2005 17:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>AGF</EquipaCasa>
+        <EquipaFora>Viborg</EquipaFora>
+        <Jogo>AGF vs Viborg</Jogo>
+    </item>
+    <item>
+        <DataHora>23-10-2005 15:30:00</DataHora>
+        <ResultadoInfo>Vitória de Brøndby</ResultadoInfo>
+        <EquipaCasa>Brøndby</EquipaCasa>
+        <EquipaFora>Midtjylland</EquipaFora>
+        <Jogo>Brøndby vs Midtjylland</Jogo>
+    </item>
+    <item>
+        <DataHora>23-10-2005 13:00:00</DataHora>
+        <ResultadoInfo>Vitória de Nordsjælland</ResultadoInfo>
+        <EquipaCasa>Nordsjælland</EquipaCasa>
+        <EquipaFora>SønderjyskE</EquipaFora>
+        <Jogo>Nordsjælland vs SønderjyskE</Jogo>
+    </item>
+    <item>
+        <DataHora>22-10-2005 15:00:00</DataHora>
+        <ResultadoInfo>Vitória de FC Copenhagen</ResultadoInfo>
+        <EquipaCasa>København</EquipaCasa>
+        <EquipaFora>Horsens</EquipaFora>
+        <Jogo>København vs Horsens</Jogo>
+    </item>
+    <item>
+        <DataHora>02-10-2005 13:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>AaB</EquipaCasa>
+        <EquipaFora>Midtjylland</EquipaFora>
+        <Jogo>AaB vs Midtjylland</Jogo>
+    </item>
+    <item>
+        <DataHora>02-10-2005 13:00:00</DataHora>
+        <ResultadoInfo>Empate</ResultadoInfo>
+        <EquipaCasa>Viborg</EquipaCasa>
+        <EquipaFora>SønderjyskE</EquipaFora>
+        <Jogo>Viborg vs SønderjyskE</Jogo>
+    </item>
+</root>

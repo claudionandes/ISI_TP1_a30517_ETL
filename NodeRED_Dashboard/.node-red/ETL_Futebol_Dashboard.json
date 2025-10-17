@@ -1,0 +1,215 @@
+[
+    {
+        "id": "3a23b08d4de73358",
+        "type": "tab",
+        "label": "ETL_Futebol_Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "cd89981bb580e03a",
+        "type": "inject",
+        "z": "3a23b08d4de73358",
+        "name": "Atualizar",
+        "props": [],
+        "repeat": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "69e85245745e4dee"
+            ]
+        ]
+    },
+    {
+        "id": "69e85245745e4dee",
+        "type": "file in",
+        "z": "3a23b08d4de73358",
+        "name": "Ler Ficheiro JSON",
+        "filename": ".node-red\\data\\Jogos\\JSON_0.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "628af53bc5c6da3a"
+            ]
+        ]
+    },
+    {
+        "id": "628af53bc5c6da3a",
+        "type": "json",
+        "z": "3a23b08d4de73358",
+        "name": "Converter JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "14b69f149b6561e0"
+            ]
+        ]
+    },
+    {
+        "id": "14b69f149b6561e0",
+        "type": "function",
+        "z": "3a23b08d4de73358",
+        "name": "Filtrar por Equipa",
+        "func": "let jogos = msg.payload;\nlet termo = (flow.get('pesquisaEquipa') || '').toLowerCase().trim();\n\nif (termo !== '') {\n    jogos = jogos.filter(j => \n        j.EquipaCasa.toLowerCase().includes(termo) || \n        j.EquipaFora.toLowerCase().includes(termo)\n    );\n}\n\nmsg.payload = jogos;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 120,
+        "wires": [
+            [
+                "b1443bb1f3195203",
+                "d88ac968699a82db"
+            ]
+        ]
+    },
+    {
+        "id": "b1443bb1f3195203",
+        "type": "function",
+        "z": "3a23b08d4de73358",
+        "name": "Contar Jogos",
+        "func": "msg.payload = msg.payload.length;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1060,
+        "y": 80,
+        "wires": [
+            [
+                "ac4fb79c04e73ea0"
+            ]
+        ]
+    },
+    {
+        "id": "d88ac968699a82db",
+        "type": "function",
+        "z": "3a23b08d4de73358",
+        "name": "Gerar Tabela",
+        "func": "let jogos = msg.payload;\nif (jogos.length === 0) {\n    msg.payload = `<p style='text-align:center; font-weight:bold;'>Nenhum jogo encontrado.</p>`;\n    return msg;\n}\nlet html = `<table border='1' style='width:100%; text-align:left; border-collapse:collapse;'>`+\n           `<tr><th>Data e Hora</th><th>Equipa Casa</th><th>Equipa Fora</th><th>Resultado</th></tr>`;\nfor (let j of jogos) {\n  html += `<tr><td>${j.DataHora}</td><td>${j.EquipaCasa}</td><td>${j.EquipaFora}</td><td>${j.ResultadoInfo}</td></tr>`;\n}\nhtml += `</table>`;\nmsg.payload = html;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "5a1b2836b73b7bfc"
+            ]
+        ]
+    },
+    {
+        "id": "ac4fb79c04e73ea0",
+        "type": "ui_text",
+        "z": "3a23b08d4de73358",
+        "group": "grp-futebol",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Total de Jogos",
+        "label": "Total de Jogos",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1280,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5a1b2836b73b7bfc",
+        "type": "ui_template",
+        "z": "3a23b08d4de73358",
+        "group": "grp-futebol",
+        "name": "Lista de Jogos",
+        "order": 3,
+        "width": 12,
+        "height": 8,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1280,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5617886e69df67d",
+        "type": "ui_template",
+        "z": "3a23b08d4de73358",
+        "group": "grp-futebol",
+        "name": "Campo de Pesquisa e Botões",
+        "order": 2,
+        "width": 12,
+        "height": 1,
+        "format": "<style>\n  .linha-pesquisa {\n    display: flex;\n    align-items: center;\n    justify-content: flex-start;\n    gap: 8px;\n    margin-bottom: 10px;\n  }\n\n  label {\n    font-weight: bold;\n  }\n\n  input[type=\"text\"] {\n    padding: 4px 8px;\n    font-size: 14px;\n    height: 30px;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n  }\n\n  button {\n    background-color: #007bff;\n    color: white;\n    border: none;\n    border-radius: 4px;\n    font-size: 13px;\n    font-weight: bold;\n    padding: 4px 10px;\n    cursor: pointer;\n    height: 30px;\n    transition: background-color 0.2s ease;\n  }\n\n  button:hover {\n    background-color: #0056b3;\n  }\n</style>\n\n<div class=\"linha-pesquisa\">\n  <label>Pesquisar Equipa:</label>\n  <input type=\"text\" ng-model=\"equipa\" placeholder=\"Digite o nome da equipa\">\n  <button ng-click=\"send({payload:{acao:'pesquisar', equipa:equipa}})\">Pesquisar</button>\n  <button ng-click=\"equipa=''; send({payload:{acao:'limpar'}})\">Limpar</button>\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "87331a10492eac25"
+            ]
+        ]
+    },
+    {
+        "id": "87331a10492eac25",
+        "type": "function",
+        "z": "3a23b08d4de73358",
+        "name": "Guardar termo pesquisa / limpar",
+        "func": "const acao = msg.payload.acao;\nif (acao === 'pesquisar') {\n    flow.set('pesquisaEquipa', msg.payload.equipa || '');\n}\nelse if (acao === 'limpar') {\n    flow.set('pesquisaEquipa', '');\n}\nreturn { payload: Date.now() }; // força reload",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "69e85245745e4dee"
+            ]
+        ]
+    },
+    {
+        "id": "grp-futebol",
+        "type": "ui_group",
+        "name": "Indicadores",
+        "tab": "tab-futebol",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "tab-futebol",
+        "type": "ui_tab",
+        "name": "Futebol_ETL",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "45ba9b4fd90d9d8b",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

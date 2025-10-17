@@ -1,0 +1,7 @@
+<!ELEMENT root (item+)>
+<!ELEMENT item (DataHora, ResultadoInfo, EquipaCasa, EquipaFora, Jogo)>
+<!ELEMENT DataHora (#PCDATA)>
+<!ELEMENT ResultadoInfo (#PCDATA)>
+<!ELEMENT EquipaCasa (#PCDATA)>
+<!ELEMENT EquipaFora (#PCDATA)>
+<!ELEMENT Jogo (#PCDATA)>

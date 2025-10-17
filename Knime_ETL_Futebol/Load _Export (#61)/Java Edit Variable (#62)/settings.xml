@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack">
+        <config key="Variable_0">
+            <entry key="type" type="xstring" value="variable"/>
+            <entry key="name" type="xstring" value="log_message"/>
+            <entry key="class" type="xstring" value="STRING"/>
+            <entry key="value" type="xstring" value=""/>
+        </config>
+        <config key="Variable_1">
+            <entry key="type" type="xstring" value="variable"/>
+            <entry key="name" type="xstring" value="log_message"/>
+            <entry key="class" type="xstring" value="STRING"/>
+            <entry key="value" type="xstring" value="SUCESSO - Exportação concluída às 2025-10-16T19:42:54.496550800"/>
+        </config>
+    </config>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="scriptImports" type="xstring" value="// Your custom imports:%%00010"/>
+        <entry key="scriptFields" type="xstring" value="// Your custom variables:%%00010"/>
+        <entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010%%00010try {%%00010    // Verifica se houve erro real%%00010    if (v_FailingNodeMessage != null %%00010        &amp;&amp; !v_FailingNodeMessage.isEmpty() %%00010        &amp;&amp; !v_FailingNodeMessage.equalsIgnoreCase(&quot;none&quot;)) {%%00010%%00010        out_log_message = &quot;ERRO na exportação: &quot; + v_FailingNodeMessage + %%00010                          &quot; (Nó: &quot; + v_FailingNode + &quot;)&quot;;%%00010    } else {%%00010        // Caso contrário, sucesso%%00010        out_log_message = &quot;SUCESSO - Exportação concluída às &quot; + %%00010                          java.time.LocalDateTime.now();%%00010    }%%00010} catch (Exception e) {%%00010    // Em caso de exceção inesperada%%00010    out_log_message = &quot;SUCESSO - Exportação concluída às &quot; + %%00010                      java.time.LocalDateTime.now();%%00010}%%00010"/>
+        <config key="jarFiles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="outCols">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="outVars">
+            <entry key="array-size" type="xint" value="1"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="log_message"/>
+                <entry key="JavaName" type="xstring" value="out_log_message"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <entry key="Type" type="xstring" value="STRING"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+        </config>
+        <config key="inCols">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="inVars">
+            <entry key="array-size" type="xint" value="4"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="FailingNodeStackTrace"/>
+                <entry key="JavaName" type="xstring" value="v_FailingNodeStackTrace"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <entry key="Type" type="xstring" value="STRING"/>
+            </config>
+            <config key="1">
+                <entry key="Name" type="xstring" value="FailingNodeDetails"/>
+                <entry key="JavaName" type="xstring" value="v_FailingNodeDetails"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <entry key="Type" type="xstring" value="STRING"/>
+            </config>
+            <config key="2">
+                <entry key="Name" type="xstring" value="FailingNodeMessage"/>
+                <entry key="JavaName" type="xstring" value="v_FailingNodeMessage"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <entry key="Type" type="xstring" value="STRING"/>
+            </config>
+            <config key="3">
+                <entry key="Name" type="xstring" value="FailingNode"/>
+                <entry key="JavaName" type="xstring" value="v_FailingNode"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <entry key="Type" type="xstring" value="STRING"/>
+            </config>
+        </config>
+        <entry key="version" type="xstring" value="version 1.x"/>
+        <entry key="templateUUID" type="xstring" isnull="true" value=""/>
+        <entry key="runOnExecute" type="xboolean" value="false"/>
+        <config key="bundles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+    </config>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value="Cria mensagem%%00010sucesso ou erro"/>
+        <entry key="contentType" type="xstring" value="text/plain"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="0"/>
+        <entry key="y-coordinate" type="xint" value="0"/>
+        <entry key="width" type="xint" value="0"/>
+        <entry key="height" type="xint" value="0"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="0"/>
+        <entry key="defFontSize" type="xint" value="-1"/>
+        <entry key="annotation-version" type="xint" value="20230412"/>
+        <config key="styles"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.jsnippet.JavaEditVarNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Java Edit Variable"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.7.0.v202508211821"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Javasnippet"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.javasnippet.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.7.0.v202508211821"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Java Edit Variable"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.node.port.flowvariable.FlowVariablePortObjectSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.port.flowvariable.FlowVariablePortObject"/>
+            <entry key="port_object_summary" type="xstring" value="Variables connection"/>
+            <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+            <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="92ff588c-4998-4a6c-a983-ef701acb6d5a"/>
+    </config>
+</config>
