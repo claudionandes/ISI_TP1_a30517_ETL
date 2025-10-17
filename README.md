@@ -1,101 +1,73 @@
-## 🛠️ Ferramentas Utilizadas
+# ISI_TP1_a30517_ETL  
+Processo ETL completo com KNIME e Node-RED
+
+---
+
+## Ferramentas Utilizadas
 
 | Fase | Ferramenta | Descrição |
 |------|-------------|-----------|
-| Extração | **JSON File (API simulada)** | Dados dos jogos armazenados localmente (`File_0.json`) |
-| Transformação | **KNIME Analytics Platform** | ETL: leitura, filtragem, conversão, escrita e exportação de dados |
-| Visualização | **Node-RED Dashboard** | Dashboard web com indicadores e filtros de pesquisa |
+| Extração | API SportMonks Football | Fonte de dados sobre jogos, equipas e resultados |
+| Transformação | KNIME Analytics Platform | Implementação do processo ETL (extração, limpeza, normalização e exportação) |
+| Visualização | Node-RED Dashboard | Apresentação dinâmica dos dados com filtros e indicadores |
 
 ---
 
-## ⚙️ ETL no KNIME
+## Processo ETL no KNIME
 
-### 📂 Workflow principal: `workflow.knime`
-
-O processo no KNIME implementa as seguintes etapas:
+O workflow desenvolvido no KNIME executa as três fases principais do processo ETL:
 
 | Etapa | Descrição |
 |-------|------------|
-| **JSON Reader** | Leitura do ficheiro `File_0.json` com dados de jogos (Data, Equipas, Resultado). |
-| **JSON to Table** | Conversão da estrutura JSON para tabela tabular. |
-| **Column Filter / Constant Value** | Remoção de colunas desnecessárias e padronização de nomes. |
-| **String Manipulation** | Correção de valores de texto (e.g., formatação de “Vitória de …”). |
-| **CSV Writer / JSON Writer / SQL Writer** | Exportação do dataset tratado para a pasta `Jogos/` para uso no Node-RED. |
+| Extract | Extração de dados da API SportMonks através dos nós API Token, GET Request, JSON Path e Ungroup. |
+| Transform | Limpeza e normalização dos dados com uso de expressões regulares, manipulação de texto e padronização de datas. |
+| Load | Exportação dos resultados tratados para os formatos JSON, XML e CSV, garantindo interoperabilidade com o Node-RED. |
+
+Cada execução gera ficheiros de saída na pasta `data/Jogos/`, utilizados pelo dashboard.
 
 ---
 
-## 💻 Visualização no Node-RED
+## Visualização no Node-RED
 
-### 🧱 Estrutura do fluxo: `futebol_dashboard.json`
-
-O dashboard criado no Node-RED tem como objetivo apresentar indicadores e permitir filtragem dinâmica.
-
-#### 📊 Funcionalidades implementadas:
+O dashboard criado no Node-RED lê o ficheiro JSON exportado pelo KNIME e apresenta os jogos com filtros e indicadores.
 
 | Função | Descrição |
 |--------|------------|
-| ✅ **Leitura do ficheiro JSON** | O fluxo lê o ficheiro `File_0.json` gerado pelo KNIME. |
-| ✅ **Contador de Jogos** | Mostra o número total de jogos carregados. |
-| ✅ **Tabela de Jogos** | Apresenta a lista de jogos com Data, Equipas e Resultado. |
-| ✅ **Filtro por Nome da Equipa** | Campo de pesquisa que filtra a tabela em tempo real. |
-| ✅ **Botão “Limpar”** | Restaura a tabela e limpa o campo de pesquisa. |
+| Leitura do ficheiro JSON | Importa os dados mais recentes. |
+| Filtro por Equipa | Permite pesquisar jogos por nome da equipa. |
+| Contador de Jogos | Mostra o número total de registos encontrados. |
+| Tabela de Jogos | Lista dinâmica com Data, Equipa Casa, Equipa Fora e Resultado. |
 
-#### 🧩 Estrutura dos nós principais:
-- **`File In`** → Lê o ficheiro JSON  
-- **`JSON`** → Converte o conteúdo em objeto utilizável  
-- **`Function (Lista de Jogos)`** → Gera tabela HTML com os dados  
-- **`Function (Total de Jogos)`** → Conta o total de registos  
-- **`Template (UI)`** → Exibe input de pesquisa e botões  
-- **`Dashboard Text/Table`** → Mostra resultados formatados  
+O fluxo é composto pelos nós File In, JSON, Function, Template (UI) e Dashboard Table/Text.
 
 ---
 
-## 🖼️ Exemplo do Dashboard
+## Execução do Projeto
 
-**Indicadores principais:**
-- Total de jogos: `25`
-- Filtro de pesquisa por equipa (campo de texto)
-- Botões uniformes “Pesquisar” e “Limpar”
-- Tabela responsiva com colunas:
-  - 📅 Data e Hora  
-  - 🏠 Equipa Casa  
-  - 🚩 Equipa Fora  
-  - 🏆 Resultado  
+### KNIME
+1. Abrir `workflow.knime`  
+2. Executar até aos nós de exportação  
+3. Confirmar a criação dos ficheiros `JSON_0.json`, `XML_0.xml` e `CSV_Jogos.csv`
 
-
----
-
-## 🚀 Execução do Projeto
-
-### ▶️ 1. KNIME
-1️⃣ Abrir `workflow.knime`  
-2️⃣ Executar os nós até ao **JSON Writer**  
-3️⃣ Confirmar que os ficheiros `File_0.json` e export.sql foram exportados corretamente
-
-### ▶️ 2. Node-RED
-1️⃣ Importar o ficheiro `Dashboard.json`  
-2️⃣ Ligar os nós e clicar em **Deploy**  
-3️⃣ Aceder ao dashboard em: http://localhost:1880/ui
+### Node-RED
+1. Importar o fluxo `ETL_Futebol_Dashboard.json`  
+2. Ligar e clicar em Deploy  
+3. Aceder em: `http://localhost:1880/ui`
 
 ---
 
-## 📊 Resultados e Conclusão
+## Resultados
 
-O sistema cumpre integralmente os requisitos do trabalho:
-- ✅ Fluxo ETL completo implementado  
-- ✅ Visualização interativa de dados  
-- ✅ Filtros dinâmicos e exportação estruturada  
-
-Demonstra o **domínio do ciclo ETL** e a **integração entre ferramentas open-source (KNIME + Node-RED)**.
+O sistema cumpre os objetivos do trabalho:
+- Pipeline ETL completo e automatizado  
+- Dados transformados e validados  
+- Visualização interativa com filtros e indicadores  
+- Integração entre KNIME e Node-RED validada com sucesso  
 
 ---
 
-## 🧾 Créditos
+## Autor
+
 Projeto desenvolvido por **Cláudio Fernandes (A30517)**  
-no âmbito da UC **Integração de Sistemas de Informação**  
-**Licenciatura em Engenharia de Sistemas Informáticos – IPCA**
-
----
-
-# ISI_TP1_a30517_ETL
-ETL completo (KNIME + Node-RED)
+Unidade Curricular: Integração de Sistemas de Informação  
+Licenciatura em Engenharia de Sistemas Informáticos – IPCA
