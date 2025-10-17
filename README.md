@@ -30,6 +30,7 @@ Cada execução gera ficheiros de saída na pasta `data/Jogos/`, utilizados pelo
 ## Visualização no Node-RED
 
 O dashboard criado no Node-RED lê o ficheiro JSON exportado pelo KNIME e apresenta os jogos com filtros e indicadores.
+
 =======
 ### Estrutura do fluxo: `ETL_Futebol_Dashboard.json`
 
