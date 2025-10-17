@@ -30,6 +30,12 @@ Cada execução gera ficheiros de saída na pasta `data/Jogos/`, utilizados pelo
 ## Visualização no Node-RED
 
 O dashboard criado no Node-RED lê o ficheiro JSON exportado pelo KNIME e apresenta os jogos com filtros e indicadores.
+=======
+### 🧱 Estrutura do fluxo: `Dashboard.json`
+
+O dashboard criado no Node-RED tem como objetivo apresentar indicadores e permitir filtragem dinâmica.
+
+#### 📊 Funcionalidades implementadas:
 
 | Função | Descrição |
 |--------|------------|
@@ -48,6 +54,15 @@ O fluxo é composto pelos nós File In, JSON, Function, Template (UI) e Dashboar
 1. Abrir `workflow.knime`  
 2. Executar até aos nós de exportação  
 3. Confirmar a criação dos ficheiros `JSON_0.json`, `XML_0.xml` e `CSV_Jogos.csv`
+=======
+**Indicadores principais:**
+- Total de jogos: `25`
+- Filtro de pesquisa por equipa (campo de texto)
+- Botões uniformes “Pesquisar” e “Limpar”
+- Tabela responsiva com colunas:
+  - 🏠 Equipa Casa  
+  - 🚩 Equipa Fora  
+  - 🏆 Resultado  
 
 ### Node-RED
 1. Importar o fluxo `ETL_Futebol_Dashboard.json`  
